@@ -85,9 +85,6 @@ class _StartState extends State<Start> {
                 SizedBox(
                   height: 20,
                 ),
-                Icon(Icons.play_arrow),
-                Icon(Icons.list),
-                Icon(Icons.settings),
                 RaisedButton(
                   padding: EdgeInsets.symmetric(horizontal: 77, vertical: 10),
                   shape: RoundedRectangleBorder(
