@@ -15,154 +15,161 @@ class _LoginState extends State<Login> {
   ];
   @override
   Widget build(BuildContext context) {
+    var mdw = MediaQuery.of(context).size.width;
+
     return Scaffold(
         body: Stack(
       children: [
         Container(
-          height: 150,
-          decoration: BoxDecoration(
-              color: Colors.orange,
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20))),
-          child: Center(
-            child: Text(
-              "QUIZ APP",
-              style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
-            ),
+          height: MediaQuery.of(context).size.height,
+          width: mdw,
+        ),
+        Positioned(
+          top: 300,
+          right: 300,
+          child: AnimatedContainer(
+            duration: Duration(milliseconds: 600),
+            height: mdw,
+            width: mdw,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(mdw),
+                color: Colors.yellow[700]),
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(top: 120, right: 20, left: 20),
-          width: double.infinity,
-          height: 400,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Color(0xFFFCFBFB),
-              border: Border.all(color: Colors.grey[300])),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "تسجيل الدخول",
-                    style: TextStyle(
-                        color: Color(0xFF404E66),
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "الاسم",
-                      style: TextStyle(
-                          color: Color(0xFF404E66),
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-
-                        //Label  Text
-
-                        //hint Text
-                        hintStyle: TextStyle(color: Colors.black),
-                        hintText: "ادخل اسمك هنا",
-                        filled: true,
-                        fillColor: Colors.white,
-                        prefixIcon: Icon(Icons.person),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue[50], width: 1),
-                            borderRadius: BorderRadius.circular(20)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(20)),
-                        errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(20))),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "كلمة السر",
-                      style: TextStyle(
-                          color: Color(0xFF404E66),
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-
-                        //Label  Text
-
-                        //hint Text
-                        hintStyle: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        hintText: "********",
-                        filled: true,
-                        fillColor: Colors.white,
-                        prefixIcon: Icon(Icons.person),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue[50], width: 1),
-                            borderRadius: BorderRadius.circular(20)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(20)),
-                        errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(20))),
-                  ),
-                  Container(
-                      margin: EdgeInsets.only(top: 20),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          gradient: LinearGradient(
-                              colors: [Colors.deepOrange, Colors.orange])),
-                      child: FlatButton(
-                        onPressed: () {},
-                        child: Text(
-                          "تسجيل الدخول",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
-                        ),
-                      )),
-                ],
-              ),
-            ),
+        Positioned(
+          top: 20,
+          left: mdw / 2,
+          child: AnimatedContainer(
+            duration: Duration(milliseconds: 600),
+            height: mdw,
+            width: mdw,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(mdw),
+                color: Colors.yellow[700]),
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(top: 600),
-          child: Row(
+        Center(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "هل لديك حساب؟",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
+                "Quiz App",
+                style: TextStyle(color: Colors.blue[900], fontSize: 50),
               ),
-              Text(
-                "  انشاء حساب   ",
-                style: TextStyle(
+              Container(
+                margin: EdgeInsets.only(right: 20),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  "الاسم",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextFormField(
+                  style: TextStyle(
+                    color: Colors.white,
                     fontSize: 18,
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold),
+                  ),
+                  decoration: InputDecoration(
+                    focusColor: Colors.blue,
+                    hintStyle: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                    hintText: "ادخل اسمك هنا",
+                    filled: true,
+                    fillColor: Colors.blue[900],
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(
+                            color: Colors.grey[500],
+                            style: BorderStyle.solid,
+                            width: 1)),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: BorderSide(
+                          color: Colors.blue[500],
+                          style: BorderStyle.solid,
+                          width: 1),
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(right: 20),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  "اللقب",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextFormField(
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                  decoration: InputDecoration(
+                    focusColor: Colors.blue,
+                    hintStyle: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                    hintText: "*********",
+                    filled: true,
+                    fillColor: Colors.blue[900],
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(
+                            color: Colors.grey[500],
+                            style: BorderStyle.solid,
+                            width: 1)),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: BorderSide(
+                          color: Colors.blue[500],
+                          style: BorderStyle.solid,
+                          width: 1),
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 15),
+                child: RaisedButton(
+                  color: Colors.blue[700],
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  padding: EdgeInsets.symmetric(horizontal: 120, vertical: 10),
+                  onPressed: () {},
+                  child: Text(
+                    "تسجيل الدخول",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "هل لديك حساب؟",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    Text(
+                      " انشاء حساب ",
+                      style: TextStyle(color: Colors.yellow[900], fontSize: 18),
+                    )
+                  ],
+                ),
               )
             ],
           ),
