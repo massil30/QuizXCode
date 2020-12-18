@@ -8,180 +8,140 @@ class Classement extends StatefulWidget {
 class _ClassementState extends State<Classement> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.yellow,
-      body: Stack(
-        children: [
-          Container(
-            alignment: Alignment.topCenter,
-            margin: EdgeInsets.only(top: 60),
-            child: Text(
-              "Classment",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 33,
-                  fontWeight: FontWeight.bold),
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        backgroundColor: Colors.yellow,
+        body: Stack(
+          children: [
+            Container(
+              alignment: Alignment.topCenter,
+              margin: EdgeInsets.only(top: 50),
+              child: Text(
+                "الترتيب",
+                style: TextStyle(
+                    color: Colors.blue[900],
+                    fontSize: 45,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          Center(
-            child: Container(
-              margin: EdgeInsets.only(left: 10, right: 10),
-              height: 400,
-              width: double.infinity,
+            Center(
+                child: Container(
+              height: 390,
+              margin: EdgeInsets.only(right: 10, left: 10),
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(10)),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: CircleAvatar(
-                                radius: 30,
-                                backgroundColor: Colors.yellow,
-                                child: Text(
-                                  "1",
-                                  style: TextStyle(
-                                      fontSize: 29,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue[900]),
-                                ),
-                              ),
-                            ),
-                            Text(
-                              "  Massil",
-                              style: TextStyle(fontSize: 22),
-                            ),
-                          ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 30,
+                        child: Text(
+                          "1",
+                          style: TextStyle(
+                              color: Colors.blue[900],
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 40),
-                          child: Text(
-                            "1000",
-                            style: TextStyle(
-                                color: Colors.blue[900], fontSize: 22),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.star,
-                            size: 50,
-                            color: Colors.amber,
-                          ),
-                        )
-                      ],
+                        backgroundColor: Colors.yellow,
+                      ),
+                      title: Text(
+                        "ماسيل",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      trailing: Text(
+                        "1000",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
-                  Divider(
-                    color: Colors.grey,
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: CircleAvatar(
-                                radius: 30,
-                                backgroundColor: Colors.yellow,
-                                child: Text(
-                                  "1",
-                                  style: TextStyle(
-                                      fontSize: 29,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue[900]),
-                                ),
-                              ),
-                            ),
-                            Text(
-                              "  Massil",
-                              style: TextStyle(fontSize: 22),
-                            ),
-                          ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 30,
+                        child: Text(
+                          "1",
+                          style: TextStyle(
+                              color: Colors.blue[900],
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 40),
-                          child: Text(
-                            "1000",
-                            style: TextStyle(
-                                color: Colors.blue[900], fontSize: 22),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.star,
-                            size: 50,
-                            color: Colors.amber,
-                          ),
-                        )
-                      ],
+                        backgroundColor: Colors.yellow,
+                      ),
+                      title: Text(
+                        "ماسيل",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      trailing: Text(
+                        "1000",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
-                  Divider(
-                    color: Colors.grey,
-                  ),
-                  Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: CircleAvatar(
-                                radius: 30,
-                                backgroundColor: Colors.yellow,
-                                child: Text(
-                                  "1",
-                                  style: TextStyle(
-                                      fontSize: 29,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue[900]),
-                                ),
-                              ),
-                            ),
-                            Text(
-                              "  Massil",
-                              style: TextStyle(fontSize: 22),
-                            ),
-                          ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 30,
+                        child: Text(
+                          "1",
+                          style: TextStyle(
+                              color: Colors.blue[900],
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 40),
-                          child: Text(
-                            "1000",
-                            style: TextStyle(
-                                color: Colors.blue[900], fontSize: 22),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.star,
-                            size: 50,
-                            color: Colors.amber,
-                          ),
-                        )
-                      ],
+                        backgroundColor: Colors.yellow,
+                      ),
+                      title: Text(
+                        "ماسيل",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      trailing: Text(
+                        "1000",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
-                  Divider(
-                    color: Colors.grey,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 30,
+                        child: Text(
+                          "1",
+                          style: TextStyle(
+                              color: Colors.blue[900],
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        backgroundColor: Colors.yellow,
+                      ),
+                      title: Text(
+                        "ماسيل",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                      trailing: Text(
+                        "1000",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                 ],
               ),
-            ),
-          )
-        ],
+            ))
+          ],
+        ),
       ),
     );
   }
