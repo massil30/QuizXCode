@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:quizxcode/screens/classement.dart';
 
-import 'package:quizxcode/screens/start.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:quizxcode/screens/login.dart';
 
-void main() => runApp(MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Classement(),
-    ));
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Login(),
+  ));
+}
